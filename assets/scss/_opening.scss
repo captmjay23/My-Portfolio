@@ -1,5 +1,6 @@
 @import "./variables";
 // Portfolio Opening
+
 .portfolio-opening{
   position: absolute;
   top: 0;
@@ -8,7 +9,7 @@
   width: 100%;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  overflow: hidden;
+  overflow-y: hidden;
   z-index: 1;
 
   .grid{

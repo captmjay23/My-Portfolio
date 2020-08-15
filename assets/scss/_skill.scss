@@ -12,19 +12,19 @@
       width: 147px;
       margin: 0 auto;
 
+      &::after{
+        content: '';
+        display: block;
+        height: 3px;
+        width: 100%;
+        background-color: $main-color;
+      }
+
       h2{
         font-size: 2rem;
         text-align: center;
         text-transform: uppercase;
         letter-spacing: 3px;
-
-        &::after{
-          content: '';
-          display: block;
-          height: 3px;
-          width: 100%;
-          background-color: $main-color;
-        }
       }
 
 
@@ -76,19 +76,21 @@
       .what-can-do-title{
         width: 340px;
         margin: 0 auto;
+        line-height: 0;
+
+        &::after{
+          content: '';
+          display: block;
+          height: 3px;
+          width: 100%;
+          background-color: $main-color;
+        }
 
         h2{
           text-transform: uppercase;
           font-size: 2rem;
           margin: 2em 0 1em;
           text-align: center;
-          &::after{
-            content: '';
-            display: block;
-            height: 3px;
-            width: 100%;
-            background-color: $main-color;
-          }
         }
       }
       .what-can-do-cards{
@@ -96,6 +98,7 @@
         display: grid;
         place-items: center;
         grid-template-columns: 1fr 1fr;
+        margin: 2em 0;
         .card{
           width: 160px;
           height: 130px;
@@ -208,7 +211,7 @@
   
         .what-can-do-title{
           width: 305px;
-  
+          line-height: 1.5;
           h2{
             margin: 1em 0 0;
             font-size: 1.8rem;
@@ -252,8 +255,9 @@
     .my-skill{
 
       .my-skill-title{
-        width: 100px;
-  
+        width: 110px;
+        line-height: 0;
+        
         h2{
           margin: 0 0 1em;
           font-size: 1.2rem;
@@ -323,7 +327,7 @@
       .what-can-do{
   
         .what-can-do-title{
-          width: 205px;
+          width: 240px;
   
           h2{
             margin: 3em 0 1em;

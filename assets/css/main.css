@@ -89,6 +89,14 @@ h1, h2, h3, h4, h5, h6 {
   display: none;
 }
 
+.overflow-Y-hidden {
+  overflow-y: hidden;
+}
+
+.overflow-Y-visible {
+  overflow-y: visible;
+}
+
 .portfolio-opening {
   position: absolute;
   top: 0;
@@ -99,7 +107,7 @@ h1, h2, h3, h4, h5, h6 {
   display: grid;
   -ms-grid-columns: 1fr 1fr 1fr;
       grid-template-columns: 1fr 1fr 1fr;
-  overflow: hidden;
+  overflow-y: hidden;
   z-index: 1;
 }
 
@@ -663,7 +671,7 @@ header .nav .navbar .navbar-nav .nav-list .nav-link:hover::after {
 
 @media only screen and (max-width: 768px) and (min-width: 567px) {
   header .nav .navbar .navbar-nav {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     width: 65%;
@@ -700,7 +708,7 @@ header .nav .navbar .navbar-nav .nav-list .nav-link:hover::after {
     margin: 0 0 0 0;
   }
   header .nav .navbar .icon-toggler {
-    position: absolute;
+    position: fixed;
     top: 30px;
     right: 30px;
     display: block;
@@ -714,7 +722,7 @@ header .nav .navbar .navbar-nav .nav-list .nav-link:hover::after {
 
 @media only screen and (max-width: 567px) {
   header .nav .navbar .navbar-nav {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     width: 65%;
@@ -751,7 +759,7 @@ header .nav .navbar .navbar-nav .nav-list .nav-link:hover::after {
     margin: 0 0 0 0;
   }
   header .nav .navbar .icon-toggler {
-    position: absolute;
+    position: fixed;
     top: 30px;
     right: 30px;
     display: block;
@@ -919,20 +927,20 @@ header .nav .navbar .navbar-nav .nav-list .nav-link:hover::after {
   margin: 0 auto 2em;
 }
 
+.main .about-me .about-me-content .about-me-text .about-me-title::after {
+  content: '';
+  display: block;
+  height: 3px;
+  width: 100%;
+  background-color: #fff;
+}
+
 .main .about-me .about-me-content .about-me-text .about-me-title h2 {
   text-align: center;
   text-transform: uppercase;
   font-size: 2rem;
   position: relative;
   letter-spacing: 2px;
-}
-
-.main .about-me .about-me-content .about-me-text .about-me-title h2::after {
-  content: '';
-  display: block;
-  height: 3px;
-  width: 100%;
-  background-color: #fff;
 }
 
 .main .about-me .about-me-content .about-me-text p {
@@ -992,7 +1000,7 @@ header .nav .navbar .navbar-nav .nav-list .nav-link:hover::after {
     padding: 1em 2.5em;
   }
   .main .about-me .about-me-content .about-me-text .about-me-title {
-    width: 100px;
+    width: 115px;
   }
   .main .about-me .about-me-content .about-me-text .about-me-title h2 {
     font-size: 1.2rem;
@@ -1017,19 +1025,19 @@ header .nav .navbar .navbar-nav .nav-list .nav-link:hover::after {
   margin: 0 auto;
 }
 
-.main .my-skill .my-skill-title h2 {
-  font-size: 2rem;
-  text-align: center;
-  text-transform: uppercase;
-  letter-spacing: 3px;
-}
-
-.main .my-skill .my-skill-title h2::after {
+.main .my-skill .my-skill-title::after {
   content: '';
   display: block;
   height: 3px;
   width: 100%;
   background-color: #fff;
+}
+
+.main .my-skill .my-skill-title h2 {
+  font-size: 2rem;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 3px;
 }
 
 .main .my-skill .my-skill-cards {
@@ -1081,6 +1089,15 @@ header .nav .navbar .navbar-nav .nav-list .nav-link:hover::after {
 .main .my-skill .what-can-do .what-can-do-title {
   width: 340px;
   margin: 0 auto;
+  line-height: 0;
+}
+
+.main .my-skill .what-can-do .what-can-do-title::after {
+  content: '';
+  display: block;
+  height: 3px;
+  width: 100%;
+  background-color: #fff;
 }
 
 .main .my-skill .what-can-do .what-can-do-title h2 {
@@ -1090,14 +1107,6 @@ header .nav .navbar .navbar-nav .nav-list .nav-link:hover::after {
   text-align: center;
 }
 
-.main .my-skill .what-can-do .what-can-do-title h2::after {
-  content: '';
-  display: block;
-  height: 3px;
-  width: 100%;
-  background-color: #fff;
-}
-
 .main .my-skill .what-can-do .what-can-do-cards {
   height: 200px;
   display: -ms-grid;
@@ -1105,6 +1114,7 @@ header .nav .navbar .navbar-nav .nav-list .nav-link:hover::after {
   place-items: center;
   -ms-grid-columns: 1fr 1fr;
       grid-template-columns: 1fr 1fr;
+  margin: 2em 0;
 }
 
 .main .my-skill .what-can-do .what-can-do-cards .card {
@@ -1218,6 +1228,7 @@ header .nav .navbar .navbar-nav .nav-list .nav-link:hover::after {
   }
   .main .my-skill .what-can-do .what-can-do-title {
     width: 305px;
+    line-height: 1.5;
   }
   .main .my-skill .what-can-do .what-can-do-title h2 {
     margin: 1em 0 0;
@@ -1246,7 +1257,8 @@ header .nav .navbar .navbar-nav .nav-list .nav-link:hover::after {
 
 @media only screen and (max-width: 567px) {
   .main .my-skill .my-skill-title {
-    width: 100px;
+    width: 110px;
+    line-height: 0;
   }
   .main .my-skill .my-skill-title h2 {
     margin: 0 0 1em;
@@ -1326,7 +1338,7 @@ header .nav .navbar .navbar-nav .nav-list .nav-link:hover::after {
     text-transform: uppercase;
   }
   .main .my-skill .what-can-do .what-can-do-title {
-    width: 205px;
+    width: 240px;
   }
   .main .my-skill .what-can-do .what-can-do-title h2 {
     margin: 3em 0 1em;
@@ -1365,18 +1377,18 @@ header .nav .navbar .navbar-nav .nav-list .nav-link:hover::after {
   margin: 0 auto;
 }
 
+.main .my-work-contact .my-work-content .my-work-title::after {
+  content: '';
+  display: block;
+  height: 3px;
+  width: 100%;
+  background-color: #fff;
+}
+
 .main .my-work-contact .my-work-content .my-work-title h2 {
   text-align: center;
   text-transform: uppercase;
   font-size: 2rem;
-}
-
-.main .my-work-contact .my-work-content .my-work-title h2::after {
-  content: '';
-  display: block;
-  width: 100%;
-  height: 3px;
-  background-color: #fff;
 }
 
 .main .my-work-contact .my-work-content .my-work-cards {
@@ -1503,7 +1515,7 @@ header .nav .navbar .navbar-nav .nav-list .nav-link:hover::after {
 
 @media only screen and (max-width: 567px) {
   .main .my-work-contact .my-work-content .my-work-title {
-    width: 80px;
+    width: 90px;
   }
   .main .my-work-contact .my-work-content .my-work-title h2 {
     font-size: 1.2rem;
@@ -1515,19 +1527,19 @@ header .nav .navbar .navbar-nav .nav-list .nav-link:hover::after {
   margin: 2em auto;
 }
 
+.main .my-contact .my-contact-title::after {
+  content: '';
+  display: block;
+  height: 3px;
+  width: 100%;
+  background-color: #fff;
+}
+
 .main .my-contact .my-contact-title h2 {
   margin: 2em 0 0;
   text-align: center;
   font-size: 2rem;
   text-transform: uppercase;
-}
-
-.main .my-contact .my-contact-title h2::after {
-  content: '';
-  display: block;
-  width: 100%;
-  height: 3px;
-  background-color: #fff;
 }
 
 .main .my-contact .contact-info {
@@ -1603,7 +1615,7 @@ header .nav .navbar .navbar-nav .nav-list .nav-link:hover::after {
 
 @media only screen and (max-width: 567px) {
   .main .my-contact .my-contact-title {
-    width: 90px;
+    width: 110px;
   }
   .main .my-contact .my-contact-title h2 {
     font-size: 1.4rem;
