@@ -11,6 +11,9 @@
     .my-skill-title{
       width: 147px;
       margin: 0 auto;
+      transform: translateX(100px);
+      opacity: 0;
+      transition: all 400ms ease-in-out;
 
       &::after{
         content: '';
@@ -29,6 +32,10 @@
 
 
     }
+    .my-skill-title.fade-right-in{
+      transform: translateX(0);
+      opacity: 1;
+    }
 
     .my-skill-cards{
       height: 400px;
@@ -36,6 +43,9 @@
       place-items: center;
       grid-template-columns: 1fr 1fr 1fr;
       grid-template-rows: 1fr 1fr;
+      transform: translateX(-200px);
+      opacity: 0;
+      transition: all 400ms ease-in-out;
 
       .card{
         width: 160px;
@@ -45,6 +55,7 @@
         align-items: center;
         justify-content: center;
 
+    
         .card-icon-container{
           
           .fa-html5,
@@ -68,6 +79,11 @@
           }
         }
       }
+
+    }
+    .my-skill-cards.fade-left-in{
+      transform: translateX(0px);
+      opacity: 1;
     }
 
 
@@ -77,6 +93,9 @@
         width: 340px;
         margin: 0 auto;
         line-height: 0;
+        transform: translateX(100px);
+        opacity: 0;
+        transition: all 400ms ease-in-out;
 
         &::after{
           content: '';
@@ -93,12 +112,22 @@
           text-align: center;
         }
       }
+      .what-can-do-title.fade-right-in{
+        transform: translateX(0);
+        opacity: 1;
+      }
+
+
       .what-can-do-cards{
         height: 200px;
         display: grid;
         place-items: center;
         grid-template-columns: 1fr 1fr;
         margin: 2em 0;
+        transform: translateX(-200px);
+        opacity: 0;
+        transition: all 500ms ease-in-out;
+
         .card{
           width: 160px;
           height: 130px;
@@ -126,6 +155,10 @@
             text-transform: uppercase;
           }
         }
+      }
+      .what-can-do-cards.fade-left-in{
+        transform: translateX(0px);
+        opacity: 1;
       }
 
 

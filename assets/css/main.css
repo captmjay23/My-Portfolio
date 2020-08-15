@@ -708,8 +708,9 @@ header .nav .navbar .navbar-nav .nav-list .nav-link:hover::after {
     margin: 0 0 0 0;
   }
   header .nav .navbar .icon-toggler {
+    z-index: 5;
     position: fixed;
-    top: 30px;
+    top: 30x;
     right: 30px;
     display: block;
     color: #fff;
@@ -759,9 +760,10 @@ header .nav .navbar .navbar-nav .nav-list .nav-link:hover::after {
     margin: 0 0 0 0;
   }
   header .nav .navbar .icon-toggler {
+    z-index: 5;
     position: fixed;
-    top: 30px;
-    right: 30px;
+    top: 15px;
+    right: 25px;
     display: block;
     color: #fff;
     cursor: pointer;
@@ -913,13 +915,25 @@ header .nav .navbar .navbar-nav .nav-list .nav-link:hover::after {
 }
 
 .main .about-me .about-me-content .about-me-img-container {
+  opacity: 0;
+  -webkit-transition: opacity, 400ms ease-in-out;
+  transition: opacity, 400ms ease-in-out;
   -webkit-box-shadow: 1px 1px 10px rgba(255, 255, 255, 0.6);
           box-shadow: 1px 1px 10px rgba(255, 255, 255, 0.6);
+}
+
+.main .about-me .about-me-content .about-me-img-container.fade-left-in {
+  opacity: 1;
 }
 
 .main .about-me .about-me-content .about-me-text {
   color: #fff;
   margin: 0 0 0 5em;
+  -webkit-transform: translateX(100px);
+          transform: translateX(100px);
+  opacity: 0;
+  -webkit-transition: opacity, 400ms ease-in-out;
+  transition: opacity, 400ms ease-in-out;
 }
 
 .main .about-me .about-me-content .about-me-text .about-me-title {
@@ -949,6 +963,12 @@ header .nav .navbar .navbar-nav .nav-list .nav-link:hover::after {
   font-size: 1.1rem;
 }
 
+.main .about-me .about-me-content .about-me-text.fade-right-in {
+  -webkit-transform: translateX(0%);
+          transform: translateX(0%);
+  opacity: 1;
+}
+
 @media only screen and (max-width: 768px) and (min-width: 567px) {
   .main .about-me .about-me-content {
     -webkit-box-orient: vertical;
@@ -964,6 +984,11 @@ header .nav .navbar .navbar-nav .nav-list .nav-link:hover::after {
     color: #fff;
     margin: 2em 0 0 0;
     padding: 1em 2.5em;
+    -webkit-transform: translateY(100px);
+            transform: translateY(100px);
+    opacity: 0;
+    -webkit-transition: opacity, 200ms ease-in-out;
+    transition: opacity, 200ms ease-in-out;
   }
   .main .about-me .about-me-content .about-me-text .about-me-title {
     width: 141px;
@@ -998,6 +1023,11 @@ header .nav .navbar .navbar-nav .nav-list .nav-link:hover::after {
     color: #fff;
     margin: 2em 0 0 0;
     padding: 1em 2.5em;
+    -webkit-transform: translateY(100px);
+            transform: translateY(100px);
+    opacity: 0;
+    -webkit-transition: opacity, 400ms ease-in-out;
+    transition: opacity, 400ms ease-in-out;
   }
   .main .about-me .about-me-content .about-me-text .about-me-title {
     width: 115px;
@@ -1023,6 +1053,11 @@ header .nav .navbar .navbar-nav .nav-list .nav-link:hover::after {
 .main .my-skill .my-skill-title {
   width: 147px;
   margin: 0 auto;
+  -webkit-transform: translateX(100px);
+          transform: translateX(100px);
+  opacity: 0;
+  -webkit-transition: all 400ms ease-in-out;
+  transition: all 400ms ease-in-out;
 }
 
 .main .my-skill .my-skill-title::after {
@@ -1040,6 +1075,12 @@ header .nav .navbar .navbar-nav .nav-list .nav-link:hover::after {
   letter-spacing: 3px;
 }
 
+.main .my-skill .my-skill-title.fade-right-in {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+  opacity: 1;
+}
+
 .main .my-skill .my-skill-cards {
   height: 400px;
   display: -ms-grid;
@@ -1049,6 +1090,11 @@ header .nav .navbar .navbar-nav .nav-list .nav-link:hover::after {
       grid-template-columns: 1fr 1fr 1fr;
   -ms-grid-rows: 1fr 1fr;
       grid-template-rows: 1fr 1fr;
+  -webkit-transform: translateX(-200px);
+          transform: translateX(-200px);
+  opacity: 0;
+  -webkit-transition: all 400ms ease-in-out;
+  transition: all 400ms ease-in-out;
 }
 
 .main .my-skill .my-skill-cards .card {
@@ -1086,10 +1132,21 @@ header .nav .navbar .navbar-nav .nav-list .nav-link:hover::after {
   text-transform: uppercase;
 }
 
+.main .my-skill .my-skill-cards.fade-left-in {
+  -webkit-transform: translateX(0px);
+          transform: translateX(0px);
+  opacity: 1;
+}
+
 .main .my-skill .what-can-do .what-can-do-title {
   width: 340px;
   margin: 0 auto;
   line-height: 0;
+  -webkit-transform: translateX(100px);
+          transform: translateX(100px);
+  opacity: 0;
+  -webkit-transition: all 400ms ease-in-out;
+  transition: all 400ms ease-in-out;
 }
 
 .main .my-skill .what-can-do .what-can-do-title::after {
@@ -1107,6 +1164,12 @@ header .nav .navbar .navbar-nav .nav-list .nav-link:hover::after {
   text-align: center;
 }
 
+.main .my-skill .what-can-do .what-can-do-title.fade-right-in {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+  opacity: 1;
+}
+
 .main .my-skill .what-can-do .what-can-do-cards {
   height: 200px;
   display: -ms-grid;
@@ -1115,6 +1178,11 @@ header .nav .navbar .navbar-nav .nav-list .nav-link:hover::after {
   -ms-grid-columns: 1fr 1fr;
       grid-template-columns: 1fr 1fr;
   margin: 2em 0;
+  -webkit-transform: translateX(-200px);
+          transform: translateX(-200px);
+  opacity: 0;
+  -webkit-transition: all 500ms ease-in-out;
+  transition: all 500ms ease-in-out;
 }
 
 .main .my-skill .what-can-do .what-can-do-cards .card {
@@ -1146,6 +1214,12 @@ header .nav .navbar .navbar-nav .nav-list .nav-link:hover::after {
   font-size: 1.45rem;
   text-align: center;
   text-transform: uppercase;
+}
+
+.main .my-skill .what-can-do .what-can-do-cards.fade-left-in {
+  -webkit-transform: translateX(0px);
+          transform: translateX(0px);
+  opacity: 1;
 }
 
 @media only screen and (max-width: 768px) and (min-width: 567px) {
@@ -1375,6 +1449,11 @@ header .nav .navbar .navbar-nav .nav-list .nav-link:hover::after {
 .main .my-work-contact .my-work-content .my-work-title {
   width: 130px;
   margin: 0 auto;
+  -webkit-transform: translateY(-50px);
+          transform: translateY(-50px);
+  opacity: 0;
+  -webkit-transition: all 300ms;
+  transition: all 300ms;
 }
 
 .main .my-work-contact .my-work-content .my-work-title::after {
@@ -1391,6 +1470,12 @@ header .nav .navbar .navbar-nav .nav-list .nav-link:hover::after {
   font-size: 2rem;
 }
 
+.main .my-work-contact .my-work-content .my-work-title.fade-right-in {
+  -webkit-transform: translateX(0px);
+          transform: translateX(0px);
+  opacity: 1;
+}
+
 .main .my-work-contact .my-work-content .my-work-cards {
   margin: 2em auto;
   display: -webkit-box;
@@ -1398,6 +1483,9 @@ header .nav .navbar .navbar-nav .nav-list .nav-link:hover::after {
   display: flex;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
@@ -1408,6 +1496,8 @@ header .nav .navbar .navbar-nav .nav-list .nav-link:hover::after {
   height: 100%;
   -webkit-box-shadow: 1px 1px 10px rgba(255, 255, 255, 0.6);
           box-shadow: 1px 1px 10px rgba(255, 255, 255, 0.6);
+  -webkit-transition: all 400ms;
+  transition: all 400ms;
 }
 
 .main .my-work-contact .my-work-content .my-work-cards .cards .cards-img-container {
@@ -1504,12 +1594,78 @@ header .nav .navbar .navbar-nav .nav-list .nav-link:hover::after {
   margin: 0 0 0;
 }
 
+.main .my-work-contact .my-work-content .my-work-cards .card-1 {
+  -webkit-transform: translateX(-100px);
+          transform: translateX(-100px);
+  opacity: 0;
+}
+
+.main .my-work-contact .my-work-content .my-work-cards .card-1.fade-left-in {
+  -webkit-transform: translateX(0px);
+          transform: translateX(0px);
+  opacity: 1;
+}
+
+.main .my-work-contact .my-work-content .my-work-cards .card-2 {
+  -webkit-transform: translateY(100px);
+          transform: translateY(100px);
+  opacity: 0;
+}
+
+.main .my-work-contact .my-work-content .my-work-cards .card-2.fade-up-in {
+  -webkit-transform: translateY(0px);
+          transform: translateY(0px);
+  opacity: 1;
+}
+
+.main .my-work-contact .my-work-content .my-work-cards .card-3 {
+  -webkit-transform: translateX(100px);
+          transform: translateX(100px);
+  opacity: 0;
+}
+
+.main .my-work-contact .my-work-content .my-work-cards .card-3.fade-right-in {
+  -webkit-transform: translateX(0px);
+          transform: translateX(0px);
+  opacity: 1;
+}
+
 @media only screen and (max-width: 768px) and (min-width: 567px) {
   .main .my-work-contact .my-work-content .my-work-title {
     width: 115px;
   }
   .main .my-work-contact .my-work-content .my-work-title h2 {
     font-size: 1.8rem;
+  }
+  .main .my-work-contact .my-work-content .my-work-cards .card-1 {
+    -webkit-transform: translateX(-100px);
+            transform: translateX(-100px);
+    opacity: 0;
+  }
+  .main .my-work-contact .my-work-content .my-work-cards .card-1.fade-left-in {
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+    opacity: 1;
+  }
+  .main .my-work-contact .my-work-content .my-work-cards .card-2 {
+    -webkit-transform: translateX(100px);
+            transform: translateX(100px);
+    opacity: 0;
+  }
+  .main .my-work-contact .my-work-content .my-work-cards .card-2.fade-up-in {
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+    opacity: 1;
+  }
+  .main .my-work-contact .my-work-content .my-work-cards .card-3 {
+    -webkit-transform: translateX(-100px);
+            transform: translateX(-100px);
+    opacity: 0;
+  }
+  .main .my-work-contact .my-work-content .my-work-cards .card-3.fade-right-in {
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+    opacity: 1;
   }
 }
 
@@ -1520,11 +1676,46 @@ header .nav .navbar .navbar-nav .nav-list .nav-link:hover::after {
   .main .my-work-contact .my-work-content .my-work-title h2 {
     font-size: 1.2rem;
   }
+  .main .my-work-contact .my-work-content .my-work-cards .card-1 {
+    -webkit-transform: unset;
+            transform: unset;
+    opacity: 0;
+  }
+  .main .my-work-contact .my-work-content .my-work-cards .card-1.fade-left-in {
+    opacity: 1;
+  }
+  .main .my-work-contact .my-work-content .my-work-cards .card-2 {
+    -webkit-transform: unset;
+            transform: unset;
+    opacity: 0;
+  }
+  .main .my-work-contact .my-work-content .my-work-cards .card-2.fade-up-in {
+    opacity: 1;
+  }
+  .main .my-work-contact .my-work-content .my-work-cards .card-3 {
+    -webkit-transform: unset;
+            transform: unset;
+    opacity: 0;
+  }
+  .main .my-work-contact .my-work-content .my-work-cards .card-3.fade-right-in {
+    opacity: 1;
+  }
 }
 
 .main .my-contact .my-contact-title {
   width: 130px;
   margin: 2em auto;
+  -webkit-transform: translateY(-50px);
+          transform: translateY(-50px);
+  opacity: 0;
+  -webkit-transition: all 400ms ease-in-out;
+  transition: all 400ms ease-in-out;
+}
+
+.main .my-contact .my-contact-title.fade-down-in {
+  -webkit-transform: translateY(0px);
+          transform: translateY(0px);
+  opacity: 1;
 }
 
 .main .my-contact .my-contact-title::after {
@@ -1548,6 +1739,13 @@ header .nav .navbar .navbar-nav .nav-list .nav-link:hover::after {
   -webkit-box-shadow: 1px 1px 10px rgba(255, 255, 255, 0.6);
           box-shadow: 1px 1px 10px rgba(255, 255, 255, 0.6);
   padding: 1em;
+  opacity: 0;
+  -webkit-transition: all 500ms ease-in-out;
+  transition: all 500ms ease-in-out;
+}
+
+.main .my-contact .contact-info.opacity-in {
+  opacity: 1;
 }
 
 .main .my-contact .contact-info .contact-info-title h2 {
@@ -1616,12 +1814,22 @@ header .nav .navbar .navbar-nav .nav-list .nav-link:hover::after {
 @media only screen and (max-width: 567px) {
   .main .my-contact .my-contact-title {
     width: 110px;
+    -webkit-transform: translateY(-50px);
+            transform: translateY(-50px);
+    opacity: 0;
+    -webkit-transition: all 400ms ease-in-out;
+    transition: all 400ms ease-in-out;
+  }
+  .main .my-contact .my-contact-title.fade-down-in {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+    opacity: 1;
   }
   .main .my-contact .my-contact-title h2 {
     font-size: 1.4rem;
   }
   .main .my-contact .contact-info {
-    width: 100%;
+    width: 90%;
     margin: 0 auto;
     -webkit-box-shadow: 1px 1px 10px rgba(255, 255, 255, 0.6);
             box-shadow: 1px 1px 10px rgba(255, 255, 255, 0.6);

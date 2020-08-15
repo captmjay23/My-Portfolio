@@ -11,6 +11,9 @@
       .my-work-title{
         width: 130px;
         margin: 0 auto;
+        transform: translateY(-50px);
+        opacity: 0;
+        transition: all 300ms;
 
         &::after{
           content: '';
@@ -27,14 +30,16 @@
 
         }
       }
+      .my-work-title.fade-right-in{
+        transform: translateX(0px);
+        opacity: 1;
+      }
 
       .my-work-cards{
         margin: 2em auto;
-        // display: grid;
-        // place-items: center;
-        // grid-template-columns: 1fr 1fr 1fr;
         display: flex;
         justify-content: space-around;
+        align-items: center;
         flex-wrap: wrap;
 
         .cards{
@@ -42,6 +47,7 @@
           width: 320px;
           height: 100%;
           @include boxShadow;
+          transition: all 400ms;
 
           .cards-img-container{
             line-height: 0;
@@ -130,6 +136,32 @@
             }
           }
         }
+
+        .card-1{
+          transform: translateX(-100px);
+          opacity: 0;
+          &.fade-left-in{
+            transform: translateX(0px);
+            opacity: 1;
+          }
+        }
+        .card-2{
+          transform: translateY(100px);
+          opacity: 0;
+          &.fade-up-in{
+            transform: translateY(0px);
+            opacity: 1;
+          }
+        }
+        .card-3{
+          transform: translateX(100px);
+          opacity: 0;
+          &.fade-right-in{
+            transform: translateX(0px);
+            opacity: 1;
+          }
+        }
+       
       }
 
 
@@ -155,6 +187,34 @@
 
         }
 
+        .my-work-cards{
+
+          .card-1{
+            transform: translateX(-100px);
+            opacity: 0;
+            &.fade-left-in{
+              transform: translateX(0px);
+              opacity: 1;
+            }
+          }
+          .card-2{
+            transform: translateX(100px);
+            opacity: 0;
+            &.fade-up-in{
+              transform: translateX(0px);
+              opacity: 1;
+            }
+          }
+          .card-3{
+            transform: translateX(-100px);
+            opacity: 0;
+            &.fade-right-in{
+              transform: translateX(0px);
+              opacity: 1;
+            }
+          }
+        }
+
   
       }
     }
@@ -175,6 +235,30 @@
             font-size: 1.2rem;
           }
 
+        }
+        .my-work-cards{
+
+          .card-1{
+            transform: unset;
+            opacity: 0;
+            &.fade-left-in{
+              opacity: 1;
+            }
+          }
+          .card-2{
+            transform: unset;
+            opacity: 0;
+            &.fade-up-in{
+              opacity: 1;
+            }
+          }
+          .card-3{
+            transform: unset;
+            opacity: 0;
+            &.fade-right-in{
+              opacity: 1;
+            }
+          }
         }
 
   

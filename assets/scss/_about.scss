@@ -15,13 +15,22 @@
       align-items: center;
 
       .about-me-img-container{
+        opacity: 0;
+        transition: opacity, 400ms ease-in-out;
         @include boxShadow;
+      }
+      .about-me-img-container.fade-left-in{
+        opacity: 1;
       }
 
       .about-me-text{
         color: $main-color;
         margin: 0 0 0 5em;
+        transform: translateX(100px);
+        opacity: 0;
+        transition:  opacity, 400ms ease-in-out;
 
+        
         .about-me-title{
           width: 160px;
           margin: 0 auto 2em;
@@ -50,6 +59,11 @@
           font-size: 1.1rem;
         }
       }
+      .about-me-text.fade-right-in{
+        transform: translateX(0%);
+        opacity: 1;
+      }
+
     }
   }
 }
@@ -70,7 +84,10 @@
           color: $main-color;
           margin: 2em 0 0 0;
           padding: 1em 2.5em;
-  
+          transform: translateY(100px);
+          opacity: 0;
+          transition:  opacity, 200ms ease-in-out;
+
           .about-me-title{
             width: 141px;
 
@@ -110,7 +127,10 @@
           color: $main-color;
           margin: 2em 0 0 0;
           padding: 1em 2.5em;
-  
+          transform: translateY(100px);
+          opacity: 0;
+          transition:  opacity, 400ms ease-in-out;
+
           .about-me-title{
             width: 115px;
 

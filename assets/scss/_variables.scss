@@ -33,3 +33,13 @@ $hoverGotoLink:transform 500ms ease-in-out;
 @mixin bg-color-transition {
   transition: 200ms ease-in-out;
 }
+
+@mixin card-one-two-four-aos {
+  transform: translateX(-100px);
+  opacity: 0;
+  transition: opacity, transform 400ms ease-in-out;
+}
+@mixin animationReturn-two-four-aos {
+  transform: translateX(0px);
+  opacity: 1;
+}

@@ -1,32 +1,32 @@
 // PORTFOLIO OPENING
-const openingOne = document.querySelector('#opening-1');
-const openingTwo = document.querySelector('#opening-2');
-const openingThree = document.querySelector('#opening-3');
-const openingFour = document.querySelector('#opening-4');
-const btnOpenPortfolio = document.querySelector('#btn-open-portfolio');
-const portfolioOpeningContainer = document.querySelector('.portfolio-opening');
-const body = document.querySelector('body');
+// const openingOne = document.querySelector('#opening-1');
+// const openingTwo = document.querySelector('#opening-2');
+// const openingThree = document.querySelector('#opening-3');
+// const openingFour = document.querySelector('#opening-4');
+// const btnOpenPortfolio = document.querySelector('#btn-open-portfolio');
+// const portfolioOpeningContainer = document.querySelector('.portfolio-opening');
+// const body = document.querySelector('body');
 
 // Event Open Portfolio
-btnOpenPortfolio.addEventListener('click', function(){
-  if(btnOpenPortfolio){
-    openingOne.classList.add('open');
-    openingTwo.classList.add('open');
-    openingThree.classList.add('open');
-    openingFour.classList.add('open');
-    // Hide The Opening 4div container
-    btnOpenPortfolio.classList.add('hide');
-    // Need it so we can't scroll down while we're in the opening portfolio
-    body.classList.remove('overflow-Y-hidden');
-    body.classList.add('overflow-Y-visible');
-  }
-})
+// btnOpenPortfolio.addEventListener('click', function(){
+//   if(btnOpenPortfolio){
+//     openingOne.classList.add('open');
+//     openingTwo.classList.add('open');
+//     openingThree.classList.add('open');
+//     openingFour.classList.add('open');
+//     // Hide The Opening 4div container
+//     btnOpenPortfolio.classList.add('hide');
+//     // Need it so we can't scroll down while we're in the opening portfolio
+//     body.classList.remove('overflow-Y-hidden');
+//     body.classList.add('overflow-Y-visible');
+//   }
+// })
 
 // Transition End Change the z index of portfolio opening 
-openingFour.addEventListener('transitionend', function() {
-  // Grab The portfolio Opening Container then Apply The Z-index
-  portfolioOpeningContainer.style.zIndex = '-1';
-})
+// openingFour.addEventListener('transitionend', function() {
+//   // Grab The portfolio Opening Container then Apply The Z-index
+//   portfolioOpeningContainer.style.zIndex = '-1';
+// })
 
 // NAV MENU
 const menuTogglerBtn = document.querySelector('.icon-toggler');

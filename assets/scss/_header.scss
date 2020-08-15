@@ -91,8 +91,9 @@ header {
         }
 
         .icon-toggler{
+          z-index: 5;
           position: fixed;
-          top: 30px;
+          top: 30x;
           right: 30px;
           display: block;
           color: $main-color;
@@ -146,9 +147,10 @@ header {
         }
 
         .icon-toggler{
+          z-index: 5;
           position: fixed;
-          top: 30px;
-          right: 30px;
+          top: 15px;
+          right: 25px;
           display: block;
           color: $main-color;
           cursor: pointer;
