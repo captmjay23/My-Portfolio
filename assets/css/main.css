@@ -1603,7 +1603,7 @@ header .nav .navbar .navbar-nav .nav-list .nav-link:hover::after {
 
 @media only screen and (max-width: 567px) {
   .main .my-contact .my-contact-title {
-    width: 90px;
+    width: 100px;
   }
   .main .my-contact .my-contact-title h2 {
     font-size: 1.4rem;
