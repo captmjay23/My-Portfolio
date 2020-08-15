@@ -94,6 +94,7 @@
       background-image: url(../images/medium-about-background.jpg);
       background-repeat: no-repeat;
       background-size: cover;
+
       .about-me-content{
         flex-direction: column;
   
@@ -112,7 +113,7 @@
           padding: 1em 2.5em;
   
           .about-me-title{
-            width: 115px;
+            width: 100px;
 
             h2{
               font-size: 1.2rem;

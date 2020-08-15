@@ -992,7 +992,7 @@ header .nav .navbar .navbar-nav .nav-list .nav-link:hover::after {
     padding: 1em 2.5em;
   }
   .main .about-me .about-me-content .about-me-text .about-me-title {
-    width: 115px;
+    width: 100px;
   }
   .main .about-me .about-me-content .about-me-text .about-me-title h2 {
     font-size: 1.2rem;
@@ -1246,7 +1246,7 @@ header .nav .navbar .navbar-nav .nav-list .nav-link:hover::after {
 
 @media only screen and (max-width: 567px) {
   .main .my-skill .my-skill-title {
-    width: 110px;
+    width: 100px;
   }
   .main .my-skill .my-skill-title h2 {
     margin: 0 0 1em;
@@ -1326,7 +1326,7 @@ header .nav .navbar .navbar-nav .nav-list .nav-link:hover::after {
     text-transform: uppercase;
   }
   .main .my-skill .what-can-do .what-can-do-title {
-    width: 240px;
+    width: 205px;
   }
   .main .my-skill .what-can-do .what-can-do-title h2 {
     margin: 3em 0 1em;
@@ -1503,7 +1503,7 @@ header .nav .navbar .navbar-nav .nav-list .nav-link:hover::after {
 
 @media only screen and (max-width: 567px) {
   .main .my-work-contact .my-work-content .my-work-title {
-    width: 90px;
+    width: 80px;
   }
   .main .my-work-contact .my-work-content .my-work-title h2 {
     font-size: 1.2rem;
@@ -1603,7 +1603,7 @@ header .nav .navbar .navbar-nav .nav-list .nav-link:hover::after {
 
 @media only screen and (max-width: 567px) {
   .main .my-contact .my-contact-title {
-    width: 100px;
+    width: 90px;
   }
   .main .my-contact .my-contact-title h2 {
     font-size: 1.4rem;
