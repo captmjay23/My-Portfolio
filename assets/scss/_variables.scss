@@ -1,0 +1,35 @@
+// Variable
+$main-font:'Poppins', sans-serif;
+$heading-font:'Roboto Condensed', sans-serif;
+
+// Color
+$main-color:#fff;
+$secondary-color:#000;
+
+
+// Hover Transition
+$hoverGotoLink:transform 500ms ease-in-out;
+// Mixin
+@mixin btnHoverAnimation {
+  @keyframes jiggleBtn {
+    0%{
+      transform: rotate(0deg);
+    }
+    50%{
+      transform: rotate(3deg);
+    }
+    100%{
+      transform: rotate(-3deg);
+    }
+  }
+}
+
+@mixin hoverLink {
+  transition: transform 200ms ease-in-out;
+}
+@mixin boxShadow {
+  box-shadow: 1px 1px 10px rgba(255,255,255, .6);
+}
+@mixin bg-color-transition {
+  transition: 200ms ease-in-out;
+}

@@ -1,0 +1,183 @@
+@import "./variables";
+.main {
+  .my-work-contact{
+    padding: 50px 0;
+    background-image: url(../images/my-work-background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    .my-work-content{
+
+      .my-work-title{
+        width: 130px;
+        margin: 0 auto;
+
+        h2{
+          text-align: center;
+          text-transform: uppercase;
+          font-size: 2rem;
+
+          &::after{
+            content: '';
+            display: block;
+            width: 100%;
+            height: 3px;
+            background-color: $main-color;
+          }
+        }
+      }
+
+      .my-work-cards{
+        margin: 2em auto;
+        // display: grid;
+        // place-items: center;
+        // grid-template-columns: 1fr 1fr 1fr;
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+
+        .cards{
+          margin: 0 1em 5em;
+          width: 320px;
+          height: 100%;
+          @include boxShadow;
+
+          .cards-img-container{
+            line-height: 0;
+
+            img{
+              max-width: 100%;
+            }
+          }
+
+          .card-text{
+            padding: 1em;
+            background-color: #2e2d2c;
+            position: relative;
+            cursor: pointer;
+
+            .card-title{
+              h4{
+                font-size: 1.125rem;
+                letter-spacing: 2px;
+                text-transform: uppercase;
+                opacity: .8;
+              }
+            }
+
+            p{
+              color: $main-color;
+              font-family: $main-font;
+              font-size: 1rem;
+              opacity: .8;
+            }
+
+            &::after{
+              content: '';
+              display: block;
+              height: 100%;
+              width: 100%;
+              position: absolute;
+              left: 0;
+              bottom: 0;
+              z-index: 1;
+              background-color: #2e2d2c;
+              transform: scale(0, 1);
+              transition: $hoverGotoLink;
+            }
+
+            &:hover::after{
+              transform: scale(1, 1);
+            }
+
+            &:hover .btn-git-container{
+              z-index: 2;
+              opacity: 1;
+              transition-delay: 200ms;
+            }
+  
+            .btn-git-container{
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%,-50%);
+              z-index: -1;
+              opacity: 0;
+              transition: opacity 200ms ease-in-out;
+              text-align: center;
+
+              a{
+                display: inline-block;
+                color: $secondary-color;
+                padding: .5em 1em;
+                margin: 0 0 1em;
+                background-color: $main-color;
+                border-radius: 50px;
+                text-transform: uppercase;
+                font-family: $main-font;
+                font-weight: 600;
+                @include bg-color-transition;
+
+                &:hover{
+                  background-color: #7cae33;
+                }
+
+                &:nth-child(2){
+                  margin: 0 0 0;
+                }
+              }
+            }
+          }
+        }
+      }
+
+
+
+    }
+  }
+}
+// Medium To Small Media Queries
+@media only screen and (max-width: 768px) and (min-width: 567px){
+  .main {
+
+    .my-work-contact{
+
+      .my-work-content{
+  
+        .my-work-title{
+          width: 115px;
+
+  
+          h2{
+            font-size: 1.8rem;
+          }
+
+        }
+
+  
+      }
+    }
+  }
+}
+// Small Media Queries
+@media only screen and (max-width: 567px){
+  .main {
+
+    .my-work-contact{
+
+      .my-work-content{
+  
+        .my-work-title{
+          width: 90px;
+
+          h2{
+            font-size: 1.4rem;
+          }
+
+        }
+
+  
+      }
+    }
+  }
+}

@@ -1,0 +1,137 @@
+@import "./variables";
+
+.main {
+  .hero{
+    height: 90vh;
+    background-image: url(../images/hero-background.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: grid;
+    place-items: center;
+
+    .hero-content{
+
+      .hero-text{
+        color: $main-color;
+        h1{
+          font-size: 5rem;
+          text-align: center;
+          text-transform: uppercase;
+        }
+  
+        h2{
+          font-size: 1.5rem;
+          text-align: center;
+          text-transform: uppercase;
+        }
+        
+        p{
+          text-align: center;
+          text-transform: uppercase;
+          text-transform: uppercase;
+          font-family: $main-font;
+          font-size: 1.125rem;
+          font-weight: 500;
+
+        }
+      }
+
+      .button-slide-down{
+
+        .fa-angle-double-down{
+          color: $main-color;
+          font-size: 3rem;
+          cursor: pointer;
+          position: absolute;
+          top: 80%;
+          left: 50%;
+          transform: translate(-50%,-50%);
+          // Animation
+          animation-name: buttonSlide;
+          animation-duration: 2000ms;
+          animation-timing-function: ease-in-out;
+          animation-iteration-count: infinite;
+        }
+      }
+    }
+  }
+
+}
+@keyframes buttonSlide{
+  0%{
+    transform: translateY(0);
+  }
+  50%{
+    transform: translateY(-20px);
+  }
+  100%{
+    transform: translateY(0);
+  }
+}
+
+// Medium to Small Media Queries
+@media only screen and (max-width: 768px) and (min-width: 567px){
+  .main {
+    .hero{
+  
+      .hero-content{
+  
+        .hero-text{
+          color: $main-color;
+          h1{
+            font-size: 3.4rem;
+          }
+    
+          h2{
+            font-size: 1rem;
+          }
+          
+          p{
+            font-size: 1rem;
+          }
+        }
+  
+        .button-slide-down{
+  
+          .fa-angle-double-down{
+            font-size: 2.5rem;
+          }
+        }
+      }
+    }
+  
+  }
+}
+// ExtraSmall Media Queries
+@media only screen and (max-width: 567px){
+  .main {
+    .hero{
+  
+      .hero-content{
+  
+        .hero-text{
+          color: $main-color;
+          h1{
+            font-size: 2.3rem;
+          }
+    
+          h2{
+            font-size: 1rem;
+          }
+          
+          p{
+            font-size: 1rem;
+          }
+        }
+  
+        .button-slide-down{
+  
+          .fa-angle-double-down{
+            font-size: 2.5rem;
+          }
+        }
+      }
+    }
+  
+  }
+}

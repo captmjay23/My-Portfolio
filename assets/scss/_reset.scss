@@ -1,0 +1,48 @@
+@import "./fonts";
+@import "./variables";
+
+html{
+  font-size: 100%;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+body{
+  line-height: 1.5;
+
+}
+*{
+  padding: 0;
+  margin: 0;
+}
+*,
+*::before,
+*::after{
+  box-sizing: inherit;
+}
+ul{
+  list-style-type: none;
+}
+a{
+  text-decoration: none;
+}
+h1,h2,h3,h4,h5,h6{
+  font-family: $heading-font;
+  color: $main-color;
+}
+// Class Helper
+.wrapper{
+  max-width: 1200px;
+  width: 95%;
+  margin: 0 auto;
+}
+.btn{
+  cursor: pointer;
+  font-family: $main-font;
+  border: none;
+  text-transform: uppercase;
+  padding: .5em 2.5em;
+  transition: background-color, color, 200ms ease-in;
+}
+.hide-desktop{
+  display: none;
+}
