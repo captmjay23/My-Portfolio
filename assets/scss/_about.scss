@@ -90,7 +90,10 @@
   .main {
 
     .about-me{
-
+      height: 100%;
+      background-image: url(../images/medium-about-background.jpg);
+      background-repeat: no-repeat;
+      background-size: cover;
       .about-me-content{
         flex-direction: column;
   
@@ -112,7 +115,7 @@
             width: 115px;
 
             h2{
-              font-size: 1.4rem;
+              font-size: 1.2rem;
             }
     
           }
