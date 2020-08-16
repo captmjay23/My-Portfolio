@@ -119,7 +119,7 @@ function myContactAOS(){
   if(ContactTitlePosition < screenPosition){
     ContactTitle.classList.add('fade-down-in');
   }
-  if(ContactInfoPosition < screenPosition){
+  if(ContactTitlePosition < screenPosition){
     ContactInfo.classList.add('opacity-in');
   }
   // FADE OUT AOS
