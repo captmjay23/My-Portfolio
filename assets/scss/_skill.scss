@@ -290,7 +290,14 @@
       .my-skill-title{
         width: 110px;
         line-height: 0;
-        
+        transform: translateX(50px);
+        opacity: 0;
+        transition: all 400ms ease-in-out;
+
+        &.fade-right-in{
+          transform: translateX(0px);
+          opacity:1;
+        }
         h2{
           margin: 0 0 1em;
           font-size: 1.2rem;
@@ -305,6 +312,14 @@
         grid-template-columns: 1fr;
         grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
         grid-row-gap: 40px;
+        transform: translateX(-50px);
+        opacity: 0;
+        transition: all 400ms ease-in-out;
+
+        &.fade-left-in{
+          transform: translateX(0px);
+          opacity: 1;
+        }
         .card{
   
           &:nth-child(1){
@@ -361,7 +376,14 @@
   
         .what-can-do-title{
           width: 240px;
-  
+          transform: translateX(50px);
+          opacity: 0;
+          transition: all 400ms ease-in-out;
+
+        &.fade-right-in{
+          transform: translateX(0px);
+          opacity:1;
+        }
           h2{
             margin: 3em 0 1em;
             font-size: 1.2rem;
@@ -372,6 +394,14 @@
           display: grid;
           place-items: center;
           grid-template-columns: 1fr;
+          transform: translateX(-50px);
+          opacity: 0;
+          transition: all 400ms ease-in-out;
+  
+          &.fade-left-in{
+            transform: translateX(0px);
+            opacity: 1;
+          }
 
           .card-icon-container{
             

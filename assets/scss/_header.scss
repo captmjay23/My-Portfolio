@@ -49,6 +49,12 @@ header {
           
         }
       }
+
+      .icon-toggler{
+        color: $main-color;
+        font-size: 1.9rem;
+        display: none;
+      }
     }
   }
 
@@ -93,14 +99,14 @@ header {
         .icon-toggler{
           z-index: 5;
           position: fixed;
-          top: 30x;
+          top: 30px;
           right: 30px;
           display: block;
           color: $main-color;
           cursor: pointer;
 
           .fas{
-            font-size: 1.9rem;
+            font-size: 1.75rem;
           }
         }
 
@@ -149,14 +155,14 @@ header {
         .icon-toggler{
           z-index: 5;
           position: fixed;
-          top: 15px;
-          right: 25px;
+          top: 30px;
+          right: 30px;
           display: block;
           color: $main-color;
           cursor: pointer;
 
           .fas{
-            font-size: 1.9rem;
+            font-size: 1.5rem;
           }
         }
 
