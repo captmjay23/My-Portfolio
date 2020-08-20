@@ -106,7 +106,10 @@
 @media only screen and (max-width: 567px){
   .main {
     .hero{
-  
+      background-image: url(../images/hero-small-background.jpg);
+      background-size: cover;
+      background-repeat: no-repeat;
+
       .hero-content{
   
         .hero-text{
